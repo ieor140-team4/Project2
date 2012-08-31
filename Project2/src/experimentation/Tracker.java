@@ -61,12 +61,12 @@ public class Tracker
    */
   public void trackLine()
   {
-    float gain = 1.0;// you may need to change this for smooth tracking
+    float gain = 1.0f;// you may need to change this for smooth tracking
    // This method needs to detect a black maker.  
                                                  
       int lval = leftEye.getLightValue();
       int rval = rightEye.getLightValue(); 
-        error = CLDistance(lval, rval);
+        int error = CLDistance(lval, rval);
         int control = 0; // do better
 
         pilot.steer(control);
